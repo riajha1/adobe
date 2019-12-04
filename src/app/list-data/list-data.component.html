@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <ng-container *ngIf="!selected"  id="bt">
+  <button class="btn btn-info"  [routerLink]="['/cart']" style="float: right;">GO to Cart  <span class="badge badge-pill badge-success badges-icon">{{countresult}}</span></button>
+  </ng-container>
+  <div class="float-right mr-5" class="place">
+    <span class="bg_green"> item {{countresult}} is added Cart </span>
+  </div>
+  
+</div>
+
+<div class="container-fluid">
+  <div class=" row col-md-12">
+    <div class="col-md-3 spacing" *ngFor="let itemdata of bucketdata"  (click)="selectedItem(itemdata)">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <img src="../../assets/not_available.PNG"> 
+          <button type="button" class="btn btn-primary green_discount">
+             <span class="">{{itemdata.discount+'%'}} off</span>
+            </button>
+          <p class="card-title">{{ itemdata.name }}</p>
+          <h6 class="card-subtitle mb-2 text-muted"> <span class="line">{{'$'+itemdata.price}}</span> <span class="mr-5"></span><span> <h4><b>{{((itemdata.price)-((itemdata.discount/itemdata.price)*100).toFixed(2))}}</b></h4> </span> </h6>
+          <p class="card-text" style="color:blueviolet;font-weight: bold">{{ itemdata.destription }}</p>
+          <div>  <button class="btn-style">{{itemdata.selected ? 'Remove' : 'Add'}} </button>
+            <!-- {{itemdata.selected}} -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

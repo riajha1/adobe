@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row col-md-12">
+    <div class="col-md-4">
+      <label>Type</label>
+      <select
+        class="form-control"
+        [(ngModel)]="selectedType"
+        (ngModelChange)="onChange($event)"
+      >
+        <option
+          value="{{ searchtype.type }}"
+          *ngFor="let searchtype of searchdata"
+          >{{ searchtype.type }}</option
+        >
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label>Availability</label>
+      <select
+        class="form-control"
+        [(ngModel)]="selectedAvailbility"
+        (ngModelChange)="onChange($event)"
+      >
+        <option
+          value="{{ searchtype.IsAvailable }}"
+          *ngFor="let searchtype of searchdata"
+          >{{ searchtype.IsAvailable }}</option
+        >
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label>Name</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="selectedName"
+        (ngModelChange)="onChange($event)"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.place{
+    position: relative;
+    top:   -10rem;
+    text-align: center;
+}
+
+.bg_green{
+    background-color: #3cec3c;
+    padding: 6px;
+}
+
+.gotag{
+    float: right;
+    color: white;
+    padding: 10px 30px 9px 30px;
+    border-radius: 19px;
+    background-color: #0095ff;
+}
+    
+.line
+{
+    text-decoration: line-through solid red;
+    
+}
+
+.green_discount{
+    position: absolute;
+    top: 58px;
+    left: 0px;
+    background-color:#3cec3c;
+    border:none;
+}

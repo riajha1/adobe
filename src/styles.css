@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #cccccc1a;
+}
+
+.spacing
+{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.float-right
+{
+    float: right;
+}
+
+.badges-icon
+{
+    position: absolute;
+    top: -20%;
+    right: -20%;
+}
+
+.card-body:hover{
+    box-shadow: 4px 5px 7px 1px #ccc;
+}
+.btn-style{
+    padding: 5px 24px 5px 24px;
+    border: 1px solid #0095ff;
+    border-radius: 7px;
+    color: #0095ff;
+    float: right;
+}
+.btn-go{
+    background-color: 0095ff
+}
